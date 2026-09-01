@@ -22,6 +22,19 @@ cashoutBtn.addEventListener("click", () => {
   if (pin == "1234") {
     alert("Cashout Sucessfull");
     setBalance(newBalance);
+
+    // 1. get history container
+    const history = document.getElementById("history-container");
+    // 2. create new div
+    const newHistory = document.createElement("div");
+    // 3. append innerHTML on div
+    newHistory.innerHTML = `
+    <div class="transaction-card p-5 bg-base-100">
+    Cashout ${cashoutAmount} TAKA Success to ${cashoutNumber}, at ${new Date()}
+    </div>
+    `;
+    // 4. append new-div in history container
+    history.append(newHistory);
   } else {
     alert("Invalid Pin.");
     return;
