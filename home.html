@@ -39,7 +39,7 @@
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
     <!-- header -->
-    <header class="border-b-2 border-gray-300">
+    <header class="border-b-2 border-gray-300 sticky top-0 z-10 bg-base-200">
       <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <div class="left flex gap-1">
           <div class="logo w-[60px]">
@@ -59,7 +59,7 @@
         </div>
       </section>
     </header>
-
+    <!-- grid section -->
     <section class="w-11/12 mx-auto py-10 space-y-5">
       <h2 class="text-3xl font-bold">
         Wellcome to Pay<span class="text-primary">oo</span>
@@ -96,7 +96,51 @@
         </button>
       </div>
     </section>
+    <!-- cashout section -->
+    <section id="cashout" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold mb-5">Cashout</h2>
+      <div class="card bg-base-100 w-full shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">Agent Number</label>
+            <input
+              id="cashout-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter Agent 11 digit Number"
+            />
 
-    <script src="./script/login.js"></script>
+            <br />
+            <label class="label text-neutral font-bold">Amount</label>
+            <input
+              id="cashout-amount"
+              type="number"
+              class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter Amount for withdraw"
+            />
+
+            <br />
+
+            <label class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              id="cashout-pin"
+              type="password"
+              maxlength="4"
+              minlength="4"
+              class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+
+            <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full">
+              WithDraw Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script/cashout.js"></script>
   </body>
 </html>
